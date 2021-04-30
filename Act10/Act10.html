@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action ="./ResForm.php" method="post">
+        <fieldset>
+            <legend>Solicitud de ingreso a la Universidad</legend>
+
+                Nombre(s)<input type="text" name="Nombre" placeholder= "Ingrese su nombre(s)" required>
+                <br><br>
+                Apellido Paterno: <input type="text" name="Apaterno" placeholder= "Ingrese su apellido paterno" required>
+                <br><br>
+                Apellido Materno: <input type="text" name="Amaterno" placeholder= "Ingrese su apellido materno" required>
+                <br><br>
+                <label for= "Sexo">Sexo: 
+                    <label><input type="radio" name ="Sexo" value="Hombre">Hombre</label>
+                    <label><input type="radio" name ="Sexo" value="Mujer">Mujer</label>
+                </label>   
+                <br><br>
+                Edad: <input type="number" name="Edad" min= "17" max="60" required>
+                <br><br>
+                Correo electrónico: <input type="email" name="Correo" placeholder= "Ingresa tu correo" required>
+                <br><br>
+                Teléfono: <input type="text" name="Telefono" maxlength="10" placeholder= "Ingresa tu telefono" required>
+                <br><br>
+                Celular: <input type="text" name="Celular" maxlength="10" placeholder= "Ingresa tu telefono celular" required>
+                <br><br>
+                Escuela de procedencia: 
+                    <label for="Escuela">
+                        <select name="Escuela">
+                            <option value="ENP1">Escuela Nacional Prepaparatoria 1</option>
+                            <option value="ENP2">Escuela Nacional Prepaparatoria 2</option>
+                            <option value="ENP3">Escuela Nacional Prepaparatoria 3</option>
+                            <option value="ENP4">Escuela Nacional Prepaparatoria 4</option>
+                            <option value="ENP5">Escuela Nacional Prepaparatoria 5</option>
+                            <option value="ENP6">Escuela Nacional Prepaparatoria 6</option>
+                            <option value="ENP7">Escuela Nacional Prepaparatoria 7</option>
+                            <option value="ENP8">Escuela Nacional Prepaparatoria 8</option>
+                            <option value="ENP9">Escuela Nacional Prepaparatoria 9</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                <br><br>
+                Promedio: <input type="number" name="Promedio" min= "5" max="10" required>
+                <br><br>
+                Primera opción: <input type="text" name="Op1" placeholder= "Ingrese primera opción de carrera" required>
+                <br><br>
+                Segunda opción: <input type="text" name="Op2" placeholder= "Ingrese segunda opción de carrera" required>
+                <br><br>
+
+                <input type ="submit" name ="Enviar" value="Enviar">
+                <input type ="reset" name ="Limpiar" value="Limpiar">
+
+        </fieldset>
+    </form>
+
+    
+</body>
+</html>

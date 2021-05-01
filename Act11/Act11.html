@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Que tipo de Taco eres?</title>
+</head>
+    <body>
+        <form action ="./ResTaco.php" method="post">
+            <fieldset>
+                <legend><h1>¿Qué tipo de taco eres?</h1></legend>
+                <!--Se agrega required en cada pregunta para que sea necesario marcar por lo menos una respuesta-->
+                <label for= "ResTaco"><b>¿Te gusta la carne? </b>
+                    <br>
+                    <label><input type="radio" name ="taco1" value="A" required>Si</label>
+                    <label><input type="radio" name ="taco1" value="B">Depende</label>
+                    <label><input type="radio" name ="taco1" value="C">Maso</label>
+                    <label><input type="radio" name ="taco1" value="D">No</label>
+                </label>
+                <br> <br>
+                <label for= "ResTaco"><b>¿Dónde prefieres comer?</b>
+                    <br>
+                    <label><input type="radio" name ="taco2" value="A" required> Donde el hambre me detenga</label>
+                    <label><input type="radio" name ="taco2" value="B">Prefiero pedir comida a domicilio</label>
+                    <label><input type="radio" name ="taco2" value="C">En un restaurante con las mejores medidas de sanidad</label>
+                    <label><input type="radio" name ="taco2" value="D">En donde ofrecen alternativas veganas</label>
+                </label>
+                <br> <br>
+                <label for= "ResTaco"><b>Prefieres tomar…</b>
+                    <br>
+                    <label><input type="radio" name ="taco3" value="A" required>Un boing de mango</label>
+                    <label><input type="radio" name ="taco3" value="B">Una cerveza bien muerta</label>
+                    <label><input type="radio" name ="taco3" value="C">Coca-cola</label>
+                    <label><input type="radio" name ="taco3" value="D">Agua de Chia</label>
+                </label>
+                <br> <br>
+                <label for= "ResTaco"><b>¿A qué hora te gusta comer tacos?</b>
+                    <br>
+                    <label><input type="radio" name ="taco4" value="A" required> En la tardecita</label>
+                    <label><input type="radio" name ="taco4" value="B">En la mañana</label>
+                    <label><input type="radio" name ="taco4" value="C">En la noche</label>
+                    <label><input type="radio" name ="taco4" value="D">A las tres de la mañana</label>
+                </label>
+                <br> <br>
+                <label for= "ResTaco"><b>¿Qué salsa le pones a tus tacos?</b>
+                    <br>
+                    <label><input type="radio" name ="taco5" value="A" required>Verde</label>
+                    <label><input type="radio" name ="taco5" value="B">Roja</label>
+                    <label><input type="radio" name ="taco5" value="C">Naranja (de habanero)</label>
+                    <label><input type="radio" name ="taco5" value="D">No me gusta la salsa</label>
+                </label>
+                <br> <br>
+                <label for= "ResTaco"><b>Prefieres los tacos con...</b>
+                    <br>
+                    <label><input type="radio" name ="taco6" value="A" required>Tortilla grasienta</label>
+                    <label><input type="radio" name ="taco6" value="B">Doble tortilla</label>
+                    <label><input type="radio" name ="taco6" value="C">Tortilla de harina</label>
+                    <label><input type="radio" name ="taco6" value="D">Tortilla de lechuga</label>
+                </label>
+                <br> <br>
+                <label for= "ResTaco"><b>¿Qué tipo de carne prefieres?</b>
+                    <br>
+                    <label><input type="radio" name ="taco7" value="A" required>Cerdo</label>
+                    <label><input type="radio" name ="taco7" value="B">Borrego</label>
+                    <label><input type="radio" name ="taco7" value="C">Res</label>
+                    <label><input type="radio" name ="taco7" value="D">No como carne</label>
+                </label>
+                <br> <br>
+                <label for= "ResTaco"><b>La mayor parte del tiempo te sientes...</b>
+                    <br>
+                    <label><input type="radio" name ="taco8" value="A" required>Feliz</label>
+                    <label><input type="radio" name ="taco8" value="B">Con mucha energía</label>
+                    <label><input type="radio" name ="taco8" value="C">Desanimado</label>
+                    <label><input type="radio" name ="taco8" value="D">Nostálgico</label>
+                </label>
+                <br> <br>
+                <label for= "ResTaco"><b>¿A quién llevarías a los tacos?</b>
+                    <br>
+                    <label><input type="radio" name ="taco9" value="A" required>Tu novia</label>
+                    <label><input type="radio" name ="taco9" value="B">Tus compas</label>
+                    <label><input type="radio" name ="taco9" value="C">Tu familia</label>
+                    <label><input type="radio" name ="taco9" value="D">Prefieres ir sol@</label>
+                </label>
+                <br> <br>
+                <label for= "ResTaco"><b>¿Con qué frecuencia comes tacos?</b>
+                    <br>
+                    <label><input type="radio" name ="taco10" value="A" required>Una vez a la semana</label>
+                    <label><input type="radio" name ="taco10" value="B">Diario</label>
+                    <label><input type="radio" name ="taco10" value="C">Una vez al mes</label>
+                    <label><input type="radio" name ="taco10" value="D">Casi nunca</label>
+                </label>
+                <br> <br>
+                <input type ="submit" name ="Enviar" value="Enviar">
+                <input type ="reset" name ="Limpiar" value="Limpiar">
+            </fieldset>
+        </form>
+    </body>
+</html>

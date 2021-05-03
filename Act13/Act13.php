@@ -8,7 +8,7 @@
 </head>
     <body>
         <h1>Batalla Naval<h1>
-                                                                                    <!--Vidas-->
+                                                                                    <!--Impimir las Vidas-->
             <h2>Vidas:</h2>
                                                                                     <!--Historial de Disparos-->
             <p>Historial de Disparos:</p>
@@ -72,6 +72,8 @@
                             $barco3v =[ $j,$j+1,$j+2];
 
                         } while ($i>9 && $j>9);
+                                                                    //Verificar Coliciones
+                                //Usar array_intersect_assoc
             ?> 
             <br>
                 Posición X(Letra): <input type="text" name="X" required>

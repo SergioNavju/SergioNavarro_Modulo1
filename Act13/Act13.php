@@ -8,9 +8,12 @@
 </head>
     <body>
         <h1>Batalla Naval<h1>
+                                                                                    <!--Vidas-->
             <h2>Vidas:</h2>
+                                                                                    <!--Historial de Disparos-->
             <p>Historial de Disparos:</p>
             <!--Aqui hay que poner el registro de los disparos-->
+                                                                                    <!--TABLA-->
             <table border="1" style="text-align: center">
                 <tbody>
                 <?php
@@ -41,9 +44,35 @@
                         }
                         echo "</tr>";
                     }
-            ?>
-                </tbody>
-            </table>
+                echo "</tbody>";
+            echo "</table>";
+                                                                                    //Barcos
+                    //Mientras sea mayor que 8
+                    do{
+                        //Para las filas
+                        $i=rand(1,10);
+                        //Para las columnas
+                        $j=rand(1,10);
+                        if ($i<8)
+                            $barco4h =[ $i,$i+1,$i+2,$i+3];
+
+                        elseif ($j<8)
+                            $barco4v =[ $j,$j+1,$j+2,$j+3];
+                        
+                    } while ($i>8 && $j>8);
+
+                    //barco de 3
+                    do{
+                        $i=rand(1,10);
+                        $j=rand(1,10);
+                        if ($i<9)
+                            $barco3h =[ $i,$i+1,$i+2];
+
+                        elseif ($j<9)
+                            $barco3v =[ $j,$j+1,$j+2];
+
+                        } while ($i>9 && $j>9);
+            ?> 
             <br>
                 Posición X(Letra): <input type="text" name="X" required>
                 Posición Y(Número): <input type="text" name="Y" required>

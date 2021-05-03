@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Morse</title>
+</head>
+    <body>
+        <form action ="./Act12.php" method="post">
+           <!--Se crea el fielset donde preguntaremos por como vamos a traducir y por el texto a traducir--> 
+            <fieldset>
+                <legend><h2>Traductor de lenguaje Morse</h2></legend>
+                <h3>Seleccione como desea traducir:</h3>
+                <label for="Traducción">
+                    <select name="Traducción">
+                        <option value="0">Del Español al Morse</option>
+                        <option value="1">Del Morse al Español</option>
+                    </select>
+                </label>
+                <br>
+                <!--Para pode ingresar el texto se usa un textarea para poder poner todo aquello a traducir-->
+                <h3>Inserte Mensaje a traducir:</h3>
+                <textarea name="texto" rows="10" cols="100" placeholder="Para traducir de Morse a Español necesito que entre cada letra escrita en morse pongas un espacio y entre cada palabra pongas un espacio, una diagonal y otro espacio. Puedes intentar poner alguna traducción que hayas hecho del Español al Morse, va a funcionar" required></textarea>
+                <br>
+                <input type ="submit" name ="Traducit" value="Traducir">
+            </fieldset>
+            
+        </form>
+    </body>
+</html>

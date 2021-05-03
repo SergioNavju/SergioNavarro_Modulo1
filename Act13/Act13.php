@@ -166,15 +166,26 @@
                                 //Usar array_intersect_assoc
             ?> 
             <br>
+            <form action ="./Act13.php" method="post">
                 Posición X(Letra): <input type="text" name="X" required>
                 Posición Y(Número): <input type="text" name="Y" required>
-                
-                <input type ="submit" name ="Traducit" value="Disparar!!">
-                <?php
-
+                <input type ="submit" name ="Traducir" value="Disparar!!">
+            </form>
+            <?php
                     $x= $_POST["X"];
                     $y= $_POST["Y"];
-                ?>
+                    var_dump($x);
+                    var_dump($y)
+                    
+                    /*$x= $EJEX[$x];
+                    $y= $EJEX[$y];
+                    var_dump($x);
+                    var_dump($y);*/
+                    
+                    /*$Coordus)= $x. $y;
+                    var_dump($Coordus);*/
+
+            ?>
     </body>
 </html>
 

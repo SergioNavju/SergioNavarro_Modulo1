@@ -10,45 +10,12 @@
         <h1>Batalla Naval<h1>
                                                                                     <!--Impimir las Vidas-->
             <h2>Vidas:</h2>
-                                                                                    <!--Historial de Disparos-->
-            <p>Historial de Disparos:</p>
-            <!--Aqui hay que poner el registro de los disparos-->
-                                                                                    <!--TABLA-->
-            <table border="1" style="text-align: center">
-                <tbody>
-                <?php
-                    $tamtablero = 11;
-                    $mar = "<img src=\"./Mar.png\" width=\"40\" height=\"40\">";;
-                    
-                    for ($i=0; $i<$tamtablero; $i++)
-                    {
-                        echo "<tr>";
-                        for ($j=0; $j<$tamtablero; $j++)
-                        {
-                            echo "<td>";
-                            if($i == 0)
-                            {
-                                if ($j>0)
-                                    echo "<b>". chr(64+$j). "</b>";
-                            }
-                            if($j == 0)
-                            {
-                                if($i>0)
-                                    echo "<b>" . $i . "</b>";
-                            }
-                            if ($j !=0 && $i!=0)
-                            {
-                                echo $mar;
-                            }
-                            echo "</td>";   
-                        }
-                        echo "</tr>";
-                    }
-                echo "</tbody>";
-            echo "</table>";
-                                                                                    //Barcos
-
-                    //TENEMOS QUE HACER ARREGLOS PARA PODER CONCOER LA POSICION DE LOS BARCOS
+            <?php
+                //Inicializamos variables
+                $x=0;
+                $y=0;
+                $Disparar = NULL;
+                    //ARREGLOS PARA PODER CONCOER LA POSICION
                     $letras = ["@","A","B","C","D","E","F","G","H","I","J"];
 
                     $EJEY = [0,1,2,3,4,5,6,7,8,9,10];
@@ -65,13 +32,89 @@
                         "I" => "9",
                         "J" => "10",
                                     ];
-                                    //Crear variable X de los que ingrese el usuario
-                    /*foreach ($EJEX as $key => $value) 
-                    {
-                        $x[$value];
-                    }*/
-                        //barco de 4
 
+                //Contador de vidas x8
+
+                //Hace falta logica
+                for ($i=1; $i <=8; $i++)
+                { 
+                    echo"<img src=\"./Cora.png\" alt=corazon height=40 widgth=40>";
+                }
+
+                // Historial 
+                echo"<p>Historial de Disparos:</p>";
+                if($Disparar != NULL)
+                {
+                    for ($i=1; $i <=10; $i++)
+                    { 
+                        array_push( $histdisp=[$i]. ($Disparo) );
+                    }
+                }
+                
+                //TABLA
+            echo "<table border=\"1\" style=\"text-align: center\">";
+            echo "<tbody>";
+                            $tamtablero = 11;
+                            $mar = "<img src=\"./Mar.png\" width=\"40\" height=\"40\">";;
+                            
+                            for ($i=0; $i<$tamtablero; $i++)
+                            {
+                                echo "<tr>";
+                                for ($j=0; $j<$tamtablero; $j++)
+                                {
+                                    echo "<td>";
+                                    if($i == 0)
+                                    {
+                                        if ($j>0)
+                                            echo "<b>". chr(64+$j). "</b>";
+                                    }
+                                    if($j == 0)
+                                    {
+                                        if($i>0)
+                                            echo "<b>" . $i . "</b>";
+                                    }
+                                    if ($j !=0 && $i!=0)
+                                    {
+                                        echo $mar;
+                                    }
+                                    echo "</td>";   
+                                }
+                                echo "</tr>";
+                            }
+                        echo "</tbody>";
+                    echo "</table>";
+                    echo "VALOR DE X ANTES DEL FORM";
+                    var_dump($x);
+                    echo "<br>";
+                    echo "VALOR DE Y ANTES DEL FORN";
+                    var_dump($y);
+                ?>
+            <br>
+            <form action ="./Act13.php" method="post">
+                Posición X(Letra): <input type="text" name="X" required>
+                Posición Y(Número): <input type="number" name="Y" min = "1" max ="10" required>
+                <input type ="submit" name ="Disparar" value="Disparar!!">
+            </form>
+
+            <?php
+                $Disparar = $_POST["Disparar"];
+                echo "VALOR DE DISPARAR";
+                var_dump($Disparar);
+                echo "<br>";
+
+                $x= $_POST["X"];
+                $y= $_POST["Y"];
+
+                echo "VALOR DE X DESPUES DEL FORM";
+                var_dump($x);
+                echo "<br>";
+                echo "VALOR DE Y DESPUES DEL FORN";
+                var_dump($y);
+                $Disparo = [$x, $y];
+
+                    // Condicion para genarar barcos
+                    if($Disparar == NULL)
+                    {
                         do {
                                 $i=rand(1,10);
                                 $j=rand(1,10);
@@ -85,14 +128,6 @@
                                     {
                                         array_push($barco4,strval($j) .strval($barco4h[$u]));
                                     }
-                                    echo "BARCO 4 VERTICAL ";
-                                    print_r($barco4);
-                                    //var_dump ($barco4);
-                                    /*echo "Antes de la asignación de letra";
-                                    var_dump($barco4v);
-                                        $barco4v = $letras[$j];
-                                    echo "Después de la asignación de letra";
-                                    var_dump($barco4v);*/
                                     
                                 } 
                                 //El barco se hace horizontal
@@ -105,14 +140,8 @@
                                     {
                                         array_push($barco4, strval($barco4v[$u]). strval($i) );
                                     }
-                                    /*echo count($barco4h);
-                                    echo "<br>";*/
-                                    echo "BARCO 4 HORIZONTAL ";
-                                    //var_dump ($barco4);
-                                    print_r($barco4);
-                                    //$barco4 = array_merge($barco4h, $barco4v);
                                 } 
-                            } while ($i>=8 && $j>=8);
+                            } while ($i>=8 && $j>=8 && $Disparar == NULL);
                             //barco de 3
                         do {
                                 $i=rand(1,10);
@@ -127,10 +156,7 @@
                                     {
                                         array_push($barco3,strval($j) .strval($barco3h[$u]));
                                     }
-                                    echo "BARCO 3 Vertical";
-                                    //var_dump ($barco3);
-                                    print_r($barco3);
-                                    //$barco3 = array_merge($barco3h, $barco3v);
+                                    
                                 }
                                 //El barco se hace horizontal
                                 elseif ($j<9) 
@@ -146,45 +172,32 @@
                                     echo "BARCO 3 Horizontal";
                                     //var_dump ($barco3);
                                     print_r($barco3);
-
-                                    //$barco3 = array_merge($barco3h, $barco3v);
                                 }
                                 else
                                     $barco3=$barco4;
-                                //for($k=0; $k <count($barco4); )
                                 
                                 $subchoque = array_intersect ($barco4, $barco3);
                                 var_dump($subchoque);
                                 
-                            } while ($i>=9 && $j>=9 && empty ($subchoque) == false);
-                            
-                            
-                            //print_r($barco3); 
-                            echo "<br>";
-                            //print_r($barco4);
-                                //Verificar Coliciones
-                                //Usar array_intersect_assoc
-            ?> 
-            <br>
-            <form action ="./Act13.php" method="post">
-                Posición X(Letra): <input type="text" name="X" required>
-                Posición Y(Número): <input type="text" name="Y" required>
-                <input type ="submit" name ="Traducir" value="Disparar!!">
-            </form>
-            <?php
-                    $x= $_POST["X"];
-                    $y= $_POST["Y"];
-                    var_dump($x);
-                    var_dump($y)
+                            } while ($i>=9 && $j>=9 && empty ($subchoque) == false && $Disparar == NULL);
+                    }
                     
-                    /*$x= $EJEX[$x];
-                    $y= $EJEX[$y];
-                    var_dump($x);
-                    var_dump($y);*/
-                    
-                    /*$Coordus)= $x. $y;
-                    var_dump($Coordus);*/
+                    print_r($barco4); echo "BARCO 4";
+                    print_r($barco3); echo "BARCO 3";
+         
+                            //Verificar si sucede un choque
+                    echo "<br>";
+                    print_r($Disparo);
 
+                    $barcos =array_merge($barco3,$barco4);
+
+                    $choque = array_intersect ($Disparo, $barcos);
+                    var_dump($choque);
+                    /*if ($choque==true) 
+                    {
+                        //Logica para las fotos de fallo o de acierto
+                    }*/
+                    
             ?>
     </body>
 </html>

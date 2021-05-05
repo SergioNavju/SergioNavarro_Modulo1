@@ -11,12 +11,16 @@
                                                                                 
             <h3>Vidas:</h3>
             <?php
-            
+                $ganaste=0;
                 //Inicializamos variables
-                $x=0;
+                $x=[0,1,2,3,4,5,6,7,8,9,10];
                 $y=0;
                 $vidas= (isset($_POST["vidas"]))? $_POST["vidas"] : 8;
                 $choques =[];
+                for ($i=1; $i<=$vidas; $i++)
+                     { 
+                      echo"<img src=\"./Cora.png\" alt=corazon height=25 widgth=25>";
+                    }
                   //ARREGLOS PARA PODER CONCOER LA POSICION
                   $letras = ["@","A","B","C","D","E","F","G","H","I","J"];
                 if($vidas>1 && $ganaste==false)

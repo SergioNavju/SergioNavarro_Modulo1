@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Mundial / Calcula cumpleaños</title>
+</head>
+    <body>
+    <table border="0" style="text-align: left">
+            <tbody>
+                <td>
+                <form action ="./Act14.php" method="post">
+                    <fieldset>
+                        <legend>Reloj Mundial</legend>
+                            <label for="Act14">Ingrese hora (CDMX)</label>
+                            <input type="time" name="HoraCDMX"  value="Hora"><br><br><br>
+                            <label for= "Act14" >Elige los paises que quieres consultar:</label><br><br>
+                            <!--Creamos una tabla para  poder alinear los inputs de cada Opción-->
+                                <table border="0" style="text-align: left">
+                                    <tbody>
+                                        <tr>
+                                            <td>Nueva York:</td>
+                                                <td><label><input type="checkbox" name ="RELOJNY" value="NY"></label></td>
+                                            <td><label>Sao Paulo:</td>
+                                                <td><input type="checkbox" name ="RELOJSP" value="SP"></label></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><label>Madrid:</td>
+                                                <td><input type="checkbox" name ="RELOJM" value="M"></label></td>
+                                            <td><label>Paris:</td>
+                                                <td><input type="checkbox" name ="RELOJP" value="P"></label></td>
+                                        </tr>
+
+                                        <tr>
+                                        <td><label>Roma:</td>
+                                            <td><input type="checkbox" name ="RELOJR" value="R"></label></td>
+                                        <td><label>Atenas:</td>
+                                            <td><input type="checkbox" name ="RELOJA" value="A"></label></td>
+                                        </tr>
+
+                                        <tr>
+                                        <td><label>Bejin:</td>
+                                            <td><input type="checkbox" name ="RELOJB" value="B"></label></td>
+                                        <td><label>Tokio:</td>
+                                            <td><input type="checkbox" name ="RELOJT" value="T"></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br><br>
+                                <input type ="submit" name ="Consultar" value="Consultar">
+                    </fieldset>
+                </td>
+                <td>
+                <fieldset>
+                    <legend>Calcula cumpleaños</legend>
+                    <label for="Cumpleaños">Ingrese su fecha de nacimiento</label>
+                    <input type="date" name="Cumpleaños" value ="Cumpleaños"><br><br><br>
+                    <label for= "Act14">¿Qué quieres consultar?<br><br>
+                    <!--Creamos una tabla para  poder alinear los inputs de cada Opción-->
+                    <table border="0" style="text-align: left">
+                        <tbody>
+                            <tr>
+                                <td><label>Dias para próximo cumpleaños</td>
+                                    <td><input type="checkbox" name ="Dias" value="D"></label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Horas para próximo cumpleaños</td>
+                                    <td><input type="checkbox" name ="Horas" value="H"></label></td>
+                            </tr>
+                            <tr>
+                            <td><label>Minutos para próximo cumpleaños</td>
+                                <td><input type="checkbox" name ="Minutos" value="M"></label></td>
+                            </tr>
+                            <tr>
+                            <td><label>¿Será en fin de semana?</td>
+                                <td><input type="checkbox" name ="FinSem" value="F"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br><br>
+                    <input type ="submit" name ="Calcular" value="Calcular">
+                </form>
+            </tbody>
+        </table>
+    </body>
+</html>

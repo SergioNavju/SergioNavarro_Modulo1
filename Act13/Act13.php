@@ -184,7 +184,6 @@
             } while ($i>=9 && $j>=9 && empty ($subchoque) == false);
             //Concatenacion de barcos para poder facilitar el manejo del arreglo 
             $barcos=array_merge($barco3,$barco4);
-            var_dump ($barcos);
           }
             //TABLERO
             echo "<table border=\"1\" style=\"text-align: center\"> <tbody>";

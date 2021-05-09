@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Obra</title>
+</head>
+    <body>
+         <!--Formulario para el registro de una nueva obra-->
+        <form action="Act15.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend><h1>Registro Nueva Obra</h1></legend>
+                Ingrese el nombre de la obra: <input type="text" name="NomO" placeholder= "Nombre de la Obra" required>
+                <br><br>
+                Ingrese el nombre del autor: <input type="text" name="NomA" placeholder= "Nombre del Autor" >
+                <br><br>
+                Ingrese el año en el cual se realizo la obra: <input type="number" name="Año" placeholder= "Año de la Obra"  min= 1000 max= 2022>
+                <br><br>
+                Ingrese su archivo: <input type ="file" name= "ArchObra" required>
+                <br><br>
+                <input type ="submit" name ="Enviar" value="Subir obra">
+            </fieldset>
+        </form>    
+    </body>
+</html>

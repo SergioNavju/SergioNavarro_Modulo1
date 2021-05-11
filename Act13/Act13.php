@@ -21,7 +21,7 @@
       //Ciclo principal de juego
       if ($ganaste == 0 && $perdiste == 0)
       {
-        echo "<h1>Batalla Naval</h1>                                                        
+        echo "<h1>Batalla Naval</h1>                                                       
               <h3>Vidas:</h3>";
         //Inicializamos variables
           $x=[0,1,2,3,4,5,6,7,8,9,10];
